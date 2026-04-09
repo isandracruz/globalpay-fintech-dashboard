@@ -1,3 +1,4 @@
+import Header from "@/components/layout/Header/Header";
 import Sidenav from "@/components/layout/Sidenav/Sidenav";
 
 export default function DashboardLayout({
@@ -11,9 +12,7 @@ export default function DashboardLayout({
 
             <main className="flex-1 flex flex-col min-w-0">
 
-                <header className="h-16 border-b border-gray-800/50">
-                    <h1>Header</h1>
-                </header>
+                <Header />
 
                 <div className="flex-1 p-6 md:p-8 overflow-y-auto">
                     {children}
