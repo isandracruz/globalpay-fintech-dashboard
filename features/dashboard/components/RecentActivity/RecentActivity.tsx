@@ -2,13 +2,10 @@
 
 import Link from "next/link";
 
-
 import { ActivityTable } from "./ActivityTable";
 import { Suspense } from "react";
 
 export function RecentActivity() {
- 
-
   return (
     <div className="col-span-12 lg:col-span-8 bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 shadow-xl overflow-hidden">
       <div className="flex items-center justify-between mb-6">
@@ -17,6 +14,7 @@ export function RecentActivity() {
           View All
         </Link>
       </div>
+
       <Suspense fallback={<h1>Loading...</h1>}>
         <ActivityTable />
       </Suspense>
