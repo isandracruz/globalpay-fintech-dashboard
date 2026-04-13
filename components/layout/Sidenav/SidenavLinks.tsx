@@ -2,6 +2,7 @@
 
 import { clsx } from "clsx";
 import { LayoutDashboard, ArrowLeftRight, Users } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -31,7 +32,7 @@ export default function SidenavLinks() {
                 const LinkIcon = link.icon;
 
                 return (
-                    <a
+                    <Link
                         key={link.name}
                         href={link.href}
                         className={clsx("text-on-surface-variant hover:bg-[#00293d]/30 rounded-xl px-4 py-3 flex items-center gap-3 transition-all", {
@@ -42,7 +43,7 @@ export default function SidenavLinks() {
                         <LinkIcon size={20} strokeWidth={2} />
 
                         <span className="font-medium text-sm">{link.name}</span>
-                    </a>
+                    </Link>
                 )
             })}
         </nav>

@@ -1,4 +1,5 @@
 import { CircleQuestionMark, Settings } from "lucide-react";
+import Link from "next/link";
 
 const links = [
     {
@@ -9,7 +10,7 @@ const links = [
     {
         name: 'Support',
         href: '/support',
-        icon: CircleQuestionMark 
+        icon: CircleQuestionMark
     }
 ];
 
@@ -19,14 +20,14 @@ export default function SidenavFooter() {
             {links.map((link) => {
                 const LinkIcon = link.icon;
                 return (
-                    <a
+                    <Link
                         key={link.name}
                         href={link.href}
                         className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 py-2 transition-colors"
                     >
                         <LinkIcon size={20} strokeWidth={2} />
                         <span className="text-xs font-medium">{link.name}</span>
-                    </a>)
+                    </Link>)
             })}
         </div>
     )
