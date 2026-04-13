@@ -4,7 +4,6 @@ import {
     flexRender,
     getCoreRowModel,
     useReactTable,
-    ColumnDef,
 } from '@tanstack/react-table';
 import { getRecentTransactions } from '../../services/transactions';
 import { useSuspenseQuery } from '@tanstack/react-query';
@@ -16,7 +15,6 @@ export function ActivityTable() {
         queryKey: ['transactions', 'recent'],
         queryFn: getRecentTransactions,
     });
-    console.log("🚀 ~ ActivityTable ~ transactions:", transactions)
 
     const table = useReactTable({
         data: transactions ?? [],
